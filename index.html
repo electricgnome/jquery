@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Example</title>
+  <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      // $('#the-button').text('Please click me!!!')
+      // $('#the-button').click(function () {
+      //   $('#the-button').text('Click again?!')
+      //   $('#the-message').text('You clicked me!!')
+      // })
+
+      $('#clear-button').click(function () {
+        console.log("clear!")
+        $('#text-field').val('')
+      })
+      $('#save-button').click(function () {
+        console.log("save!")
+        $('#log').append('<li>' + $('#text-field').val())
+      })
+
+
+      //===== 
+      $('a').click(function (e) {
+        e.preventDefault()
+        // console.log($('a').attr('href'))
+        $('#iframe').attr('src', $(this).attr('href'))
+
+
+      })
+
+      });
+
+  </script>
+</head>
+
+<body>
+  <h1>jQuery Example</h1>
+  <!-- <ul class="list">
+      <li>
+        <a href="http://google.com">Google</a>
+      </li>
+      <li>
+        <a href="http://www.digitalcrafts.com/">DC School</a>
+      </li>
+    </ul>
+    <input id="search" name="search">
+    <button id="the-button" onclick="console.log('You Clicked!!')">Click Me</button><br>
+    <p id="the-message">Pardon me, would you please</p> -->
+  <!-- =========== -->
+
+  <input id="text-field" type="text" name="text">
+  <button id="clear-button">Clear</button>
+  <button id="save-button">Save</button>
+  <ul id="log">
+    <li>Type messages here:</li>
+  </ul>
+
+  <!-- =========== -->
+
+  <ul>
+    <li>
+      <a href="http://hellohappy.org">Hello Happy</a>
+    </li>
+    <li>
+      <a href="http://duckduckgo.com">DuckDuckGo</a>
+    </li>
+    <li>
+      <a href="http://css-tricks.com">CSS Tricks</a>
+    </li>
+  </ul>
+  <iframe id="iframe" src="http://hellohappy.org" width="800" height="480"></iframe>
+
+
+
+</body>
+
+</html>
