@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	
+	height: 100%;
+	/*Image only BG fallback*/
+	background-image: url('/img/gaming-pattern.png');
+	/*background = gradient + image pattern combo*/
+	background-repeat:repeat;
+}
+.container{
+	display:grid;
+	grid-gap:5px;
+	grid-template-columns: repeat(12,1fr);
+	grid-template-rows: 200px 550px 50px;
+}
+#table{
+	
+	background-image: url('/img/pool_table.png');
+
+	display:grid;
+	grid-gap:5px;
+	grid-template-columns: repeat(6,1fr);
+	grid-template-rows: 20px 200px 20px 200px 20px;
+
+	grid-column:2 / -2;
+
+}
+
+#dealer {
+	
+	font-size: 16px;
+	color: white;
+	grid-column:2 / -1;
+}
+#dealer-hand{
+	background-color:green;
+	grid-column:2 / -2;
+}
+#player{
+	font-size: 16px;
+	color: white;
+	grid-column:2 / -1;
+}
+#player-hand{
+	background-color:green;
+	grid-column:2 / -2;
+}
+.buttons{
+	/* display: flex; */
+    justify-content: center;
+	align-items: center;
+	
+	
+	grid-column:2/ -1
+}
+button{
+	background-color:#555555; 
+	
+	border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.hand ul{
+	list-style-type:none;
+}
+
+.hand ul li{
+display: inline;
+}
