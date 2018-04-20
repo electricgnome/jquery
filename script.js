@@ -1,1 +1,0 @@
-$('.list a').text('Click this link')
